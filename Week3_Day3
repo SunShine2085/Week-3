@@ -24,3 +24,57 @@ numbers = []
 for i in range(5):
     numbers.append(eval(input("Please enter a number: ")))
 print(sum(numbers))
+
+#Activity 1
+
+# numbers = []
+# for i in range(21):
+#     numbers.append(float(input("Please enter a number: ")))
+# print("You entered:", numbers)
+# print("Average:", statistics.mean(numbers))
+
+# Activity 2
+# def mangle(str):
+#     str = str.upper()
+#     str = str[0:2] + str[3:-3] + str[-2:]
+#     return str
+# def main():
+#     # print(mangle("hellothere"))
+#     test_input = ["hellothere", "42 degrees Celsius", "eeeeeee"]
+#     test_output = ["HELOTHRE", "42DEGREES CELSUS", "EEEEE"]
+#     for i in range(len(test_input)):
+#         print("Mangle", test_input[i] +":", mangle(test_input[i]) == test_output[i])
+# main()
+
+# Activity 3
+
+# def count_e(list):
+#     num_e = 0 #sum -- aggregates values
+#     for string in list:
+#         num_e += string.upper().count("E")
+#     return num_e
+#
+# def main():
+# # test count_e
+#     print(count_e(["hi", "hello", "EEk!"]))
+#     print("count_e", count_e(["hi", "hello","EEk!"]) == 3)
+#
+# main()
+
+def count_v(list):
+    num_v = 0 #sum -- aggregates values
+    for string in list:
+        num_v += string.upper().count("A")
+        num_v += string.upper().count("E")
+        num_v += string.upper().count("I")
+        num_v += string.upper().count("O")
+        num_v += string.upper().count("U")
+    return num_v
+
+def main():
+# test count_v
+    print(count_v(["hi", "hello", "OOF!"]))
+    print("count_v", count_v(["hi", "hello", "OOF!"]) == 5)
+
+main()
+
