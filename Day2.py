@@ -40,3 +40,55 @@ def main():
 
 main()
 
+# def is_even(n):
+#     if (n % 2) == 0:
+#         print(even)
+#     else:
+#         print("The number is odd")
+#
+# is_even(3)
+
+# def calculate_total(meal, tax_rate, tip_rate):
+#     print((meal * (1 + tip_rate)) * (1 + (tax_rate)))
+#
+# calculate_total(53.48, .07, .18)
+
+# def hey(x):
+#     print(x**2)
+#
+# def main():
+#     hey(5)
+#     hey(0)
+#     hey(-3)
+#
+# main()
+
+
+# def there(n):
+#     if n>=0:
+#         print(2**n)
+#     else:
+#         print("0")
+#
+# def main():
+#     there(5)
+#     there(0)
+#     there(3)
+#     there(-2)
+#     there(-6)
+#
+# main()
+
+def are_we(n, phrase):
+    for i in range(1, n + 1):
+        print("Are we", phrase, "yet?")
+def main():
+    are_we(2,"there")
+    are_we(3,"50")
+    are_we(1,"")
+    are_we(0,"hey!")
+main()
+
+
+
+
