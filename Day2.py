@@ -15,13 +15,9 @@
 
 # Function problems
 
-# def absolute_difference(x,y):
-#     print(abs(x-y))
-#
-# absolute_difference(5,10)
-# absolute_difference(10,5)
-# absolute_difference(200,-200)
-
+def absolute_difference(x,y):
+    diff = abs(x-y)
+    return diff
 
 def pyramid(char, n):
     for i in range(1, n + 1):
@@ -29,6 +25,10 @@ def pyramid(char, n):
 
 
 def main():
+    print("difference 5 10", absolute_difference(5,10) == 5 )
+    print("difference 10 5", absolute_difference(10,5) == 5)
+    print("difference 5 10", absolute_difference(200,-200) == 400)
+
     print('pyramid("*", 2)')
     pyramid("*", 2)
 
@@ -39,3 +39,4 @@ def main():
     pyramid("x", 10)
 
 main()
+
