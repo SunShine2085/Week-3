@@ -55,4 +55,20 @@
 # print(h(4))
 # print(h(5))
 
+def dbl (x):
+    return 2*x
+
+def quad(x):
+    return dbl(dbl(x))
+
+def hello(name):
+    print("Hello", name +", how are you today?")
+
+def repeat(string, n):
+    return string * n
+
+def square(string , n):
+    for i in range(n):
+        print(repeat(string, n))
+
 
