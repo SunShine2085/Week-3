@@ -1,1 +1,26 @@
+# Using Lists and Strings
 
+# my_lists = ["one", "two", "three", "four", "five"]
+#
+# print(my_lists[0])
+# print(my_lists[-1])
+# print(my_lists[2:4])
+#
+# for num in my_lists:
+#     if num.count("o") > 0:
+#         print(num)
+#
+# phrase = "Green Eggs & Ham"
+# print("green" in phrase)
+# print("Green" in phrase)
+# print("two" in my_lists)
+
+# phrase = "Monty Python"
+# for letter in phrase:
+#     print(letter, end="-")
+# print()
+
+numbers = []
+for i in range(5):
+    numbers.append(eval(input("Please enter a number: ")))
+print(sum(numbers))
