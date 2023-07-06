@@ -1,1 +1,22 @@
+# Count the number of letter grades in a file
+# Chris Courville
 
+letters = ["A", "B", "C", "D", "F"]
+counts = {}
+file = "grades.txt"
+
+# loop through all lines in the file
+for line in open(file):
+    letter = line.replace("\n", "")
+    # if commas, use split
+    # print(line) #testing
+    # gets the count of letter if it exists, 0 otherwise
+    count = counts.get(letter, 0)
+    counts[letter] = count + 1  # store count
+
+# Print out counts
+print("Letter counts: ")
+for l in letters:
+    print(l + ":", counts.get(l, 0))
+# Practice with files and dictionaries
+#
