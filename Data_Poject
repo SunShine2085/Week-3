@@ -10,13 +10,13 @@ def strip_split(strip):
     for line in file:
         list = line.rstrip().split(",")
         if list[1] == strip:
-            spring.append(eval(list[2]))
+            list_1.append(eval(list[2]))
         else:
-            fall.append(eval(list[2]))
+            list_2.append(eval(list[2]))
 
 # Data Variables
-spring = []
-fall = []
+list_1 = []
+list_2 = []
 
 # Read in the file
 csv = "sample_grades.csv"
@@ -28,8 +28,7 @@ file.close()
 # print("Fall:  ", fall)
 
 print("Fall 2016:")
-output_stats(fall)
+output_stats(list_2)
 print()
 print("Spring 2016:")
-output_stats(spring)
-
+output_stats(list_1)
