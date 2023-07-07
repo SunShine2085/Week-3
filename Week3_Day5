@@ -1,3 +1,4 @@
+# Practice with files and dictionaries
 # Count the number of letter grades in a file
 # Chris Courville
 
@@ -18,5 +19,78 @@ for line in open(file):
 print("Letter counts: ")
 for l in letters:
     print(l + ":", counts.get(l, 0))
-# Practice with files and dictionaries
+# Reading/Writing files examples
+# Read in a file called add.txt & display it to the screen
+# Make sure add.txt is in the same project
+# dataFile = open("add.txt")
+# for line in dataFile:
+#     print(line.rstrip())
+# dataFile.close()
+
+# Writes content from a user to a file
+
+# PROMPT = "Enter the next line in the file: "
+# outfilename = input("What is the name of your output file? ")
+# numLines = eval(input("How many lines do you want to write? "))
 #
+# # create a new file object, in write "write" mode
+# dataFile = open(outfilename, "w") # a to append
+#
+# for x in range(numLines):
+#     userinput = input(PROMPT)
+#     # write the user's input to the file
+#     print(userinput, file=dataFile)
+#
+# # close the file with the method "close"
+# dataFile.close()
+
+# Reads a text file and adds a dash in front
+
+# dataFile = open("Get up with the get down.txt")
+# for line in dataFile:
+#     print("-", line.rstrip())
+# dataFile.close()
+
+# # asks for file name then asks for a number until 0 write to file.
+# filename = input("Please enter a file name: ")
+# fileOut = open(filename, "w")
+# prompt = "Please enter a number ('0' when finished)"
+# response = eval(input(prompt))
+# while response != 0:
+#     print(response, file=fileOut)
+#     response = eval(input(prompt))
+# fileOut.close()
+
+# Counts lines in 3 seperate files and outputs to a new file
+
+# def count_lines(filename):
+#     total = 0
+#     for line in open(filename):
+#         total += 1
+#     return filename + " : " + str(total)
+# list = ["Get up with the get down.txt", "grades.txt", "out.txt"]
+# out = open("counts.txt", "w")
+# for file in list:
+#     print(count_lines(file), file=out)
+# out.close()
+
+# Counts lines and words then adds them all up
+
+list = ["Get up with the get down.txt", "grades.txt", "out.txt"]
+out = open("counts.txt", "w")
+tot_lines = 0
+tot_words = 0
+for file in list:
+    lines = 0
+    words = 0
+    for line in open(file):
+        lines += 1
+        words += len(line.split(" "))
+    tot_lines += lines
+    tot_words += words
+    print(file, ":", lines, "lines,", words, "words", file=out)
+print("TOTAL:", tot_lines, "lines,", tot_words, "words", file=out)
+
+
+
+
